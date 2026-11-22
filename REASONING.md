@@ -82,7 +82,7 @@ This version of the `reach` predicate now produces a value, but because there is
 
 ## P13
 
-Write one to three sentences here. Name the rule that fixes each field.
+Basically the `len` predicate recurses and every time it recurse it takes the first element off the list, and add 1 to M every time it recursion returns back up. So the returned value is N=3 since there are 3 elements inside the list and there is no second value since after N=3 it tries to backtrack but there are no other branches to follow.
 
 ## P14
 
