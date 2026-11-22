@@ -86,7 +86,7 @@ Basically the `len` predicate recurses and every time it recurse it takes the fi
 
 ## P14
 
-Write one to three sentences here. Name the rule that fixes each field.
+Clause 1 (join([], L, L)) is tried first and unifies at once with X=[] and Y=[1,2], giving answer 1. Pressing ; triggers a Redo that moves to clause 2 (with H=1, R=[2]) and calls join(_,Y,[2]), whose base case gives T=[], so X=[1] and Y=[2] is answer 2. The base case fires once at each recursion depth (X=[], [1], [1,2]), and clause 2 can't match [H|R] against [], so the trace ends in Fail after 3 answers.
 
 ## P15
 
