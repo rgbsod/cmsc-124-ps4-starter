@@ -90,9 +90,9 @@ Clause 1 (join([], L, L)) is tried first and unifies at once with X=[] and Y=[1,
 
 ## P15
 
-Write one to three sentences here. Name the rule that fixes each field.
+X > 2 runs first, and at that moment X is unbound. > is an arithmetic comparison that needs actual numbers on both sides, so Prolog throws an error
 
 ## P16
 
-Write one to three sentences here. Name the rule that fixes each field.
+elem(X, [1,2,3]) is the functor, it hands X one candidate at a time (1, then 2, then 3) as we can see the recursion takes the first element of the 2nd argument. X > 2 is the filter it only passes or fails, and each failure sends Prolog back to elem for the next X. Only 3 passes since X=3 > 2, so X = 3 is printed
 
