@@ -74,7 +74,7 @@ Bob is picked third and last since Prolog backtracks again and checks Bob's chil
 
 ## P11
 
-Write one to three sentences here. Name the rule that fixes each field.
+Basically the way the reach predicate works is that it loops recursively forever sicnce the recursion is before any edges are read. So the values are unbounded since it does not produce any edges. The count is unbounded since the recursion will never stop and it did not find any values.
 
 ## P12
 
