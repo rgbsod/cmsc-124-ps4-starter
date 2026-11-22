@@ -64,7 +64,7 @@ Write one to three sentences here. Name the rule that fixes each field.
 
 ## P09
 
-Write one to three sentences here. Name the rule that fixes each field.
+`ancestor_r` places the recursive clause first, so the rule keeps following the parent relationship deeper before checking the base clause. For tom, it follows tom → bob → ann → sue and backtracks only when it reaches a person with no children, meaning the deepest relationships are found first.
 
 ## P10
 
