@@ -68,7 +68,9 @@ Write one to three sentences here. Name the rule that fixes each field.
 
 ## P10
 
-Write one to three sentences here. Name the rule that fixes each field.
+Pat is first: Prolog initially tries the first rule, parent(X, jim), and finds parent(pat, jim), so X = pat.
+Tom is second. When Prolog backtracks, it tries the recursive rule and checks Tom's children; since Bob is an ancestor of Jim through Pat, Tom qualifies, so X = tom.
+Bob is picked third and last since Prolog backtracks again and checks Bob's children; since Pat is Jim's parent, Bob also qualifies, so X = bob.
 
 ## P11
 
