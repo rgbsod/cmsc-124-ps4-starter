@@ -74,11 +74,11 @@ Bob is picked third and last since Prolog backtracks again and checks Bob's chil
 
 ## P11
 
-Basically the way the reach predicate works is that it loops recursively forever sicnce the recursion is before any edges are read. So the values are unbounded since it does not produce any edges. The count is unbounded since the recursion will never stop and it did not find any values.
+Basically the way the `reach` predicate works is that it loops recursively forever sicnce the recursion is before any edges are read. So the values are unbounded since it does not produce any edges. The count is unbounded since the recursion will never stop and it did not find any values.
 
 ## P12
 
-Write one to three sentences here. Name the rule that fixes each field.
+This version of the `reach` predicate now produces a value, but because there is a cycle and we keep prompting `;` to find other values, it would recurse back to `(c, a)` and the cycle will continue once more. And the count is unbounded since there is infinite values produced if we continue.
 
 ## P13
 
