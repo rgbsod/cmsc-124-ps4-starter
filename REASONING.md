@@ -51,6 +51,9 @@ THe first goal unifies X with `f(Y, a)` and leaves `Y` unbound, and the second g
 
 Since these two terms involve a variable and  an atom, these fit a functor `(f/2)`, so it would first bind X with a and Y with b simultaneously. Thus first has X=a since it is the first variable and Y=b as second, with count being 2 as there are two variables involved.
 
+## Correction for f(X, b) = f(a, Y)
+
+I predicted `X=a` as first, `Y=b` as second, and a count of 2. The prompt printed `X=a,Y=b` as a single answer with `none` for second and a `count` of `1`. This is because compound term unification binds every variable across all arguments simultaneously to satisfy the query in one solution.
 
 ## P06
 
