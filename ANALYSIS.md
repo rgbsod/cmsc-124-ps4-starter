@@ -1,7 +1,7 @@
 # The Search and the Stack
 
 ## ./trace P07
-== trace P07 ==
+`== trace P07 ==
 Call: grandparent(tom,X)
   Call: parent(tom,_)
   Exit: parent(tom,liz)
@@ -24,7 +24,7 @@ Redo: grandparent(tom,pat)
   Redo: parent(tom,bob)
   Fail: parent(tom,_)
 Fail: grandparent(tom,X)
-== 2 answers ==
+== 2 answers ==`
 
 - Which of its lines push a frame onto Activity 15's runtime stack? Which
   lines pop one?
@@ -34,5 +34,5 @@ Fail: grandparent(tom,X)
 - Why does swapping the two clauses of `reach/2` change whether the search
   ever answers, while swapping the two clauses of `ancestor/2` only changes
   the order of the answers?
-  - In `reach/2`, the recursive clause puts the recursive call `reach(X, Z)` before reading `edge(Z, Y)`. When placed first, every `Call:` immediately pushes another `reach(a, Z)` frame with a new unbound variable before ever testing the base case `edge(X, Y)`, causing unbounded left recursion that never reaches an `Exit:` port. Putting the base clause first allows `edge(a, b)` to bind variables before recursing. In `ancestor/2`, however, the recursive clause reads `parent(A, P)` before calling `ancestor(P, D)`. Because `parent/2` has finitely many facts in the knowledge base, `parent(A, P)` bounds the recursion depth regardless of which clause comes first, so swapping clauses only changes whether shallow answers (like `Exit: parent(tom,liz)`) or deep descendants appear first.
+  - In `reach/2`, the recursive clause puts the recursive call `reach(X, Z)` before reading `edge(Z, Y)`. When placed first, every `Call:` immediately pushes another `reach(a, Z)` frame with a new unbound variable before ever testing the base case `edge(X, Y)`, causing unbounded left recursion that never reaches an `Exit:` port. Putting the base clause first allows `edge(a, b)` to bind variables before recursing. In `ancestor/2`, however, the recursive clause reads `parent(A, P)` before calling `ancestor(P, D)`. Because `parent/2` has finitely many facts in the knowledge base, `parent(A, P)` bounds the recursion depth regardless of which clause comes first, so swapping clauses only changes whether shallower answers (like `Exit: parent(tom,liz)`) or deep descendants appear first.
 
