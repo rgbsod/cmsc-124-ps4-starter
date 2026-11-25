@@ -4,6 +4,12 @@
 This repository holds the Prolog prediction corpus and the rule stubs for
 Problem Set 4. The assignment manual defines the work and the submission rules.
 
+## Members
+| Name                      | GitHub                                     |
+| ------------------------- | ------------------------------------------ |
+| Mikaela Kristen De Guzman | [@rgbsod](https://github.com/rgbsod)       |
+| Brent Michael Mendoza     | [@TheJuanderer](https://github.com/TheJuanderer) |
+
 ## Layout
 
 ```text
